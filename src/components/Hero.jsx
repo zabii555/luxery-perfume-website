@@ -9,6 +9,9 @@ import {
   Film
 } from 'lucide-react';
 import { useCart } from '../context/CartContext';
+import imgRegalGold from '../assets/images/zn_bottle_regal_gold_1788973135712.jpg';
+import imgDarkGold from '../assets/images/zn_bottle_dark_gold_1788973081694.jpg';
+
 
 export default function Hero() {
   const { setIsQuizOpen, perfumesList, setActiveDetailProduct, addToCart } = useCart();
@@ -107,28 +110,16 @@ export default function Hero() {
             {/* Flacon Stage Card Container */}
             <div className="relative w-full max-w-md aspect-[4/5] rounded-3xl overflow-hidden glass-emerald border-2 border-gold-400/50 shadow-gold-glow-lg bg-emerald-950/80 group">
               
-              {/* Background Video Loop with Image Fallback */}
-              {!vidError ? (
-                <video
-                  ref={videoRef}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  onError={() => setVidError(true)}
-                  className="w-full h-full object-cover object-center filter brightness-95 contrast-110 group-hover:scale-105 transition-transform duration-700"
-                  src="https://cdn.pixabay.com/video/2024/02/09/200021-911812852_large.mp4"
-                />
-              ) : (
-                <img
-                  src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=1200&auto=format&fit=crop"
-                  alt="ZN Royale No. 1 Flacon"
-                  className="w-full h-full object-cover object-center filter brightness-95 contrast-110 group-hover:scale-105 transition-transform duration-700"
-                />
-              )}
+              {/* ZN Parfums Bottle Image - Always Show */}
+              <img
+                src={imgRegalGold}
+                alt="ZN Royale No. 1 Flacon"
+                className="w-full h-full object-cover object-center filter brightness-95 contrast-110 group-hover:scale-105 transition-transform duration-700"
+              />
 
               {/* Gradient Vignette Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-emerald-950 via-emerald-950/20 to-black/40 pointer-events-none" />
+
 
               {/* Top Bestseller Badge */}
               <div className="absolute top-4 left-4 z-20">

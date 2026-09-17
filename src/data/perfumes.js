@@ -1,4 +1,29 @@
-export const PERFUMES = [
+import imgRoyaleNo1HD from '../assets/images/zn_royale_no1_hd.jpg';
+import imgAventusImperialHD from '../assets/images/zn_aventus_imperial_hd.jpg';
+import imgNoirTobaccoHD from '../assets/images/zn_noir_tobacco_hd.jpg';
+import imgOudMarqueeHD from '../assets/images/zn_oud_marquee_hd.jpg';
+import imgSauvageElixirHD from '../assets/images/zn_sauvage_elixir_hd.jpg';
+import imgNaxosGoldHD from '../assets/images/zn_naxos_gold_hd.jpg';
+import imgSantalSublimeHD from '../assets/images/zn_santal_sublime_hd.jpg';
+import imgAngelsAmberHD from '../assets/images/zn_angels_amber_hd.jpg';
+import imgLaytonExclusifHD from '../assets/images/zn_layton_exclusif_hd.jpg';
+import imgLostCherryHD from '../assets/images/zn_lost_cherry_hd.jpg';
+import imgGrandSoirHD from '../assets/images/zn_grand_soir_hd.jpg';
+import imgSilverMountainHD from '../assets/images/zn_silver_mountain_hd.jpg';
+import imgBlackPhantomHD from '../assets/images/zn_black_phantom_hd.jpg';
+import imgJazzClubHD from '../assets/images/zn_jazz_club_hd.jpg';
+import imgBleuEtoileHD from '../assets/images/zn_bleu_etoile_hd.jpg';
+
+import imgDarkGold from '../assets/images/zn_bottle_dark_gold_1788973081694.jpg';
+import imgCrystalRose from '../assets/images/zn_bottle_crystal_rose_1788973096030.jpg';
+import imgAmberWood from '../assets/images/zn_bottle_amber_wood_1788973111671.jpg';
+import imgMatteBlack from '../assets/images/zn_bottle_matte_black_1788973122758.jpg';
+import imgRegalGold from '../assets/images/zn_bottle_regal_gold_1788973135712.jpg';
+import imgOceanBlue from '../assets/images/zn_bottle_ocean_blue_1788974713812.jpg';
+
+
+
+const PERFUME_CATALOG = [
   {
     id: 1,
     name: "ZN Royale No. 1",
@@ -19,11 +44,12 @@ export const PERFUMES = [
       { size: "100ml Signature Bottle", price: 340 },
       { size: "200ml Luxury Decanter", price: 580 }
     ],
-    image: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=1000&auto=format&fit=crop",
+    image: imgRoyaleNo1HD,
     gallery: [
-      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1547887537-6158d64c35b3?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1523293182086-7651a899d37f?q=80&w=1000&auto=format&fit=crop"
+      imgRoyaleNo1HD,
+      imgRegalGold,
+      imgAmberWood,
+      imgDarkGold
     ],
     videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-perfume-bottle-in-the-smoke-41584-large.mp4",
     description: "An intoxicating symphony of luminous saffron, crushed Egyptian jasmine grandiflorum, and molten ambergris. ZN Royale No. 1 captures the aura of pure red crystal under candlelight—radiant, opulent, and utterly magnetic.",
@@ -89,11 +115,12 @@ export const PERFUMES = [
       { size: "100ml Signature Bottle", price: 360 },
       { size: "200ml Luxury Decanter", price: 610 }
     ],
-    image: "https://images.unsplash.com/photo-1523293182086-7651a899d37f?q=80&w=1000&auto=format&fit=crop",
+    image: imgAventusImperialHD,
     gallery: [
-      "https://images.unsplash.com/photo-1523293182086-7651a899d37f?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=1000&auto=format&fit=crop"
+      imgAventusImperialHD,
+      imgMatteBlack,
+      imgDarkGold,
+      imgRoyaleNo1HD
     ],
     videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-liquid-perfume-splashing-slow-motion-41585-large.mp4",
     description: "An emblem of power, vision, and victory. Opening with crisp French blackcurrant, juicy smoked pineapple, and Italian bergamot, evolving into birch smoke, patchouli, and rare grey ambergris.",
@@ -150,11 +177,12 @@ export const PERFUMES = [
       { size: "100ml Signature Bottle", price: 320 },
       { size: "200ml Luxury Decanter", price: 550 }
     ],
-    image: "https://images.unsplash.com/photo-1547887537-6158d64c35b3?q=80&w=1000&auto=format&fit=crop",
+    image: imgNoirTobaccoHD,
     gallery: [
-      "https://images.unsplash.com/photo-1547887537-6158d64c35b3?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1523293182086-7651a899d37f?q=80&w=1000&auto=format&fit=crop"
+      imgNoirTobaccoHD,
+      imgAmberWood,
+      imgDarkGold,
+      imgRegalGold
     ],
     videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-perfume-bottle-in-the-smoke-41584-large.mp4",
     description: "Rich, opulent, and warm. Opulent tobacco leaf bathed in creamy Madagascar vanilla beans, aromatic spice accords, cacao liquor, and dried winter fruits with rich tree sap.",
@@ -202,10 +230,12 @@ export const PERFUMES = [
       { size: "100ml Signature Bottle", price: 410 },
       { size: "200ml Luxury Decanter", price: 720 }
     ],
-    image: "https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=1000&auto=format&fit=crop",
+    image: imgOudMarqueeHD,
     gallery: [
-      "https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1547887537-6158d64c35b3?q=80&w=1000&auto=format&fit=crop"
+      imgOudMarqueeHD,
+      imgRegalGold,
+      imgAmberWood,
+      imgRoyaleNo1HD
     ],
     videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-liquid-perfume-splashing-slow-motion-41585-large.mp4",
     description: "The crown jewel of Middle Eastern luxury. Wild Cambodian Agarwood aged for 25 years harmonized with Taif Rose petals, saffron thread, frankincense, and creamy Mysore sandalwood.",
@@ -253,10 +283,12 @@ export const PERFUMES = [
       { size: "100ml Signature Bottle", price: 310 },
       { size: "200ml Luxury Decanter", price: 530 }
     ],
-    image: "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?q=80&w=1000&auto=format&fit=crop",
+    image: imgSauvageElixirHD,
     gallery: [
-      "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1523293182086-7651a899d37f?q=80&w=1000&auto=format&fit=crop"
+      imgSauvageElixirHD,
+      imgOceanBlue,
+      imgMatteBlack,
+      imgBleuEtoileHD
     ],
     videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-perfume-bottle-in-the-smoke-41584-large.mp4",
     description: "An electrifying nocturnal potion. Blending potent cinnamon bark, cardamom, and fresh grapefruit with a heart of wild Nyons lavender, licorice root, Haitian vetiver, and smoky patchouli.",
@@ -304,10 +336,12 @@ export const PERFUMES = [
       { size: "100ml Signature Bottle", price: 350 },
       { size: "200ml Luxury Decanter", price: 590 }
     ],
-    image: "https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=1000&auto=format&fit=crop",
+    image: imgNaxosGoldHD,
     gallery: [
-      "https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=1000&auto=format&fit=crop"
+      imgNaxosGoldHD,
+      imgDarkGold,
+      imgRegalGold,
+      imgAngelsAmberHD
     ],
     videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-liquid-perfume-splashing-slow-motion-41585-large.mp4",
     description: "A golden tribute to the soul of Sicily. Sun-drenched bergamot and lemon blend seamlessly into golden lavender and raw mountain honey, melting into smooth tobacco leaves and tonka bean.",
@@ -355,10 +389,12 @@ export const PERFUMES = [
       { size: "100ml Signature Bottle", price: 330 },
       { size: "200ml Luxury Decanter", price: 560 }
     ],
-    image: "https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=1000&auto=format&fit=crop",
+    image: imgAmberWood,
     gallery: [
-      "https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1523293182086-7651a899d37f?q=80&w=1000&auto=format&fit=crop"
+      imgAmberWood,
+      imgDarkGold,
+      imgRegalGold,
+      imgRoyaleNo1HD
     ],
     videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-perfume-bottle-in-the-smoke-41584-large.mp4",
     description: "An intoxicating ode to the spirit of the American West under indigo skies. Smoked Australian sandalwood, papyrus, cardamom, violet blossom, and supple worn saddle leather.",
@@ -406,10 +442,12 @@ export const PERFUMES = [
       { size: "100ml Signature Bottle", price: 375 },
       { size: "200ml Luxury Decanter", price: 640 }
     ],
-    image: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=1000&auto=format&fit=crop",
+    image: imgDarkGold,
     gallery: [
-      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1547887537-6158d64c35b3?q=80&w=1000&auto=format&fit=crop"
+      imgDarkGold,
+      imgAmberWood,
+      imgRegalGold,
+      imgNaxosGoldHD
     ],
     videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-liquid-perfume-splashing-slow-motion-41585-large.mp4",
     description: "An opulent liquor distillation derived directly from the 'Angels’ Share' evaporation of aged Cognac barrels. Infused with Ceylon cinnamon, roasted tonka bean, hazelnut praline, and oak wood essence.",
@@ -457,10 +495,12 @@ export const PERFUMES = [
       { size: "100ml Signature Bottle", price: 345 },
       { size: "200ml Luxury Decanter", price: 580 }
     ],
-    image: "https://images.unsplash.com/photo-1523293182086-7651a899d37f?q=80&w=1000&auto=format&fit=crop",
+    image: imgRegalGold,
     gallery: [
-      "https://images.unsplash.com/photo-1523293182086-7651a899d37f?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?q=80&w=1000&auto=format&fit=crop"
+      imgRegalGold,
+      imgOceanBlue,
+      imgSauvageElixirHD,
+      imgMatteBlack
     ],
     videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-perfume-bottle-in-the-smoke-41584-large.mp4",
     description: "A grand aristocratic composition. Crisp green apple and bergamot meet fiery cardamom, geranium, and royal lavender, settled upon caramelized vanilla, bitter almond, and guaiac wood.",
@@ -508,10 +548,12 @@ export const PERFUMES = [
       { size: "100ml Signature Bottle", price: 365 },
       { size: "200ml Luxury Decanter", price: 620 }
     ],
-    image: "https://images.unsplash.com/photo-1547887537-6158d64c35b3?q=80&w=1000&auto=format&fit=crop",
+    image: imgCrystalRose,
     gallery: [
-      "https://images.unsplash.com/photo-1547887537-6158d64c35b3?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=1000&auto=format&fit=crop"
+      imgCrystalRose,
+      imgRoyaleNo1HD,
+      imgRegalGold,
+      imgCrystalRose
     ],
     videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-liquid-perfume-splashing-slow-motion-41585-large.mp4",
     description: "A lush journey into the once-forbidden. Exotic black cherry drenched in kirsch liqueur, roasted bitter almond syrup, Turkish rose, and Peru balsam with smoky roasted tonka beans.",
@@ -559,10 +601,12 @@ export const PERFUMES = [
       { size: "100ml Signature Bottle", price: 350 },
       { size: "200ml Luxury Decanter", price: 590 }
     ],
-    image: "https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=1000&auto=format&fit=crop",
+    image: imgDarkGold,
     gallery: [
-      "https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=1000&auto=format&fit=crop"
+      imgDarkGold,
+      imgRegalGold,
+      imgAmberWood,
+      imgRoyaleNo1HD
     ],
     videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-perfume-bottle-in-the-smoke-41584-large.mp4",
     description: "Dress in your finest evening attire and plunge into the endless night of Paris. A warm golden amber masterpiece featuring Siamese benzoin resin, Brazilian tonka bean, and Spanish labdanum.",
@@ -610,10 +654,12 @@ export const PERFUMES = [
       { size: "100ml Signature Bottle", price: 310 },
       { size: "200ml Luxury Decanter", price: 530 }
     ],
-    image: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=1000&auto=format&fit=crop",
+    image: imgCrystalRose,
     gallery: [
-      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1523293182086-7651a899d37f?q=80&w=1000&auto=format&fit=crop"
+      imgCrystalRose,
+      imgOceanBlue,
+      imgMatteBlack,
+      imgRegalGold
     ],
     videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-liquid-perfume-splashing-slow-motion-41585-large.mp4",
     description: "Capturing the purity of sparkling alpine water cascading over snow-capped Swiss peaks. Invigorating green tea notes, crisp blackcurrant buds, Italian bergamot, and crystalline white musk.",
@@ -661,10 +707,12 @@ export const PERFUMES = [
       { size: "100ml Signature Bottle", price: 380 },
       { size: "200ml Luxury Decanter", price: 650 }
     ],
-    image: "https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=1000&auto=format&fit=crop",
+    image: imgMatteBlack,
     gallery: [
-      "https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1547887537-6158d64c35b3?q=80&w=1000&auto=format&fit=crop"
+      imgMatteBlack,
+      imgAventusImperialHD,
+      imgNoirTobaccoHD,
+      imgDarkGold
     ],
     videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-perfume-bottle-in-the-smoke-41584-large.mp4",
     description: "An intoxicating voyage across stormy seas. Dark Martinique rum, bitter roasted Ethiopian coffee beans, pure sugarcane caramel, cyanide bitter almond, and rich sandalwood.",
@@ -712,10 +760,12 @@ export const PERFUMES = [
       { size: "100ml Signature Bottle", price: 295 },
       { size: "200ml Luxury Decanter", price: 510 }
     ],
-    image: "https://images.unsplash.com/photo-1523293182086-7651a899d37f?q=80&w=1000&auto=format&fit=crop",
+    image: imgNoirTobaccoHD,
     gallery: [
-      "https://images.unsplash.com/photo-1523293182086-7651a899d37f?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?q=80&w=1000&auto=format&fit=crop"
+      imgNoirTobaccoHD,
+      imgAmberWood,
+      imgDarkGold,
+      imgMatteBlack
     ],
     videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-liquid-perfume-splashing-slow-motion-41585-large.mp4",
     description: "Transport yourself to a private speakeasy jazz club in Brooklyn. The warmth of saxophone notes, pink pepper cocktails, aged rum liquor, clary sage, tobacco leaf, and bourbon vanilla.",
@@ -763,10 +813,12 @@ export const PERFUMES = [
       { size: "100ml Signature Bottle", price: 335 },
       { size: "200ml Luxury Decanter", price: 570 }
     ],
-    image: "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?q=80&w=1000&auto=format&fit=crop",
+    image: imgBleuEtoileHD,
     gallery: [
-      "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=1000&auto=format&fit=crop"
+      imgBleuEtoileHD,
+      imgOceanBlue,
+      imgSauvageElixirHD,
+      imgSilverMountainHD
     ],
     videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-perfume-bottle-in-the-smoke-41584-large.mp4",
     description: "The ultimate archetype of elegance. An ode to masculine freedom. Opening with crisp frosted mint and pink grapefruit, followed by aromatic ginger and jasmine, anchored by New Caledonian sandalwood, cedar, and frankincense.",
@@ -795,6 +847,28 @@ export const PERFUMES = [
     ]
   }
 ];
+
+const PERFUME_PALETTES = [
+  ['#9bd8e7', '#071a46', '#d8b56a'], ['#ead6b0', '#6e3214', '#e3a84e'],
+  ['#e7b2b9', '#3b0714', '#c99762'], ['#d6c8ad', '#24130b', '#c4a167'],
+  ['#b8c9db', '#111c38', '#d5a84f'], ['#f0c978', '#5e260d', '#f1d58a'],
+  ['#c3b19b', '#24201b', '#c79d62'], ['#e2b177', '#3b180e', '#d8bd7c'],
+  ['#c6d3df', '#172846', '#d1a66a'], ['#d88984', '#3a0d18', '#d4a15c'],
+  ['#d4b36f', '#28180e', '#f1d38c'], ['#dce9ec', '#233c4c', '#c9d6dc'],
+  ['#9b7b67', '#17100d', '#c79b63'], ['#b99b7e', '#26160e', '#d2a05a'],
+  ['#9bd8e7', '#061536', '#d9b66c']
+];
+
+const createPerfumeImage = (index, variant = 0) => {
+  const [background, bottle, label] = PERFUME_PALETTES[index];
+  const rotation = [-3, 2, -2, 3, -1][(index + variant) % 5];
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000"><defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="${background}"/><stop offset="1" stop-color="#111522"/></linearGradient><linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="${bottle}"/><stop offset=".5" stop-color="#05070d"/><stop offset="1" stop-color="${bottle}"/></linearGradient></defs><rect width="800" height="1000" fill="url(#bg)"/><circle cx="650" cy="180" r="210" fill="#fff" opacity=".12"/><ellipse cx="400" cy="850" rx="270" ry="42" fill="#05070d" opacity=".45"/><g transform="rotate(${rotation} 400 540)"><rect x="320" y="190" width="160" height="115" rx="18" fill="#0a0c12"/><rect x="338" y="125" width="124" height="82" rx="14" fill="${label}"/><rect x="235" y="285" width="330" height="540" rx="38" fill="url(#glass)" stroke="${label}" stroke-width="8"/><rect x="275" y="475" width="250" height="165" rx="8" fill="#0b0d13" stroke="${label}" stroke-width="5"/><text x="400" y="535" fill="${label}" font-family="Georgia,serif" font-size="27" text-anchor="middle" letter-spacing="4">ZN PARFUMS</text><text x="400" y="580" fill="#fff" font-family="Arial,sans-serif" font-size="20" text-anchor="middle" letter-spacing="3">EXTRAIT ${String(index + 1).padStart(2, '0')}</text><text x="400" y="615" fill="${label}" font-family="Arial,sans-serif" font-size="12" text-anchor="middle" letter-spacing="2">HAUTE PARFUMERIE</text></g></svg>`;
+  return `data:image/svg+xml,${encodeURIComponent(svg)}`;
+};
+
+const UNIQUE_PERFUME_IMAGES = PERFUME_PALETTES.map((_, index) => createPerfumeImage(index));
+
+export const PERFUMES = PERFUME_CATALOG;
 
 export const BRAND_INFO = {
   name: "ZN Parfums Privé",

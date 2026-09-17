@@ -6,7 +6,12 @@ export default defineConfig({
   base: '/royale-parfumes-websit/',
   plugins: [react()],
   server: {
+    host: '0.0.0.0',
     port: 5173,
-    open: true
+    open: false,
+    watch: {
+      usePolling: true,
+      interval: 100
+    }
   }
 })

@@ -197,32 +197,18 @@ export default function VideoShowcase() {
               '0 40px 120px rgba(0,0,0,0.85), 0 0 80px rgba(212,170,112,0.15)',
           }}
         >
-          {/* Native HTML5 Video Canvas */}
+          {/* YouTube Video Embed Canvas (Cropped to hide YouTube branding & popups) */}
           <div className="relative w-full aspect-video bg-black overflow-hidden group">
-            {/* Loading Spinner */}
-            {isVideoLoading && (
-              <div className="absolute inset-0 flex flex-col items-center justify-center bg-sapphire-950 z-20">
-                <div className="w-16 h-16 rounded-full border-2 border-champagne-400/40 border-t-champagne-400 animate-spin mb-4" />
-                <span className="text-champagne-400/80 text-xs font-mono uppercase tracking-widest">
-                  Loading ZN 4K Mastercut…
-                </span>
-              </div>
-            )}
-
-            {/* Video Element */}
-            <video
-              ref={videoRef}
-              src={activeChapter.videoUrl}
-              autoPlay
-              muted={isMuted}
-              loop
-              playsInline
-              onTimeUpdate={handleTimeUpdate}
-              onLoadedMetadata={handleLoadedMetadata}
-              onCanPlay={() => setIsVideoLoading(false)}
-              onClick={togglePlay}
-              className="w-full h-full object-cover cursor-pointer"
-            />
+            {/* Embedded YouTube 4K Video with Crop Mask */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+              <iframe
+                key={activeChapterIndex + (isMuted ? '-muted' : '-unmuted')}
+                src={`https://www.youtube.com/embed/h6-CRM5eBsM?autoplay=1&mute=${isMuted ? '1' : '0'}&loop=1&playlist=h6-CRM5eBsM&start=20&controls=0&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&disablekb=1&fs=0&playsinline=1`}
+                title="ZN Haute Parfumerie Mastercut"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                className="absolute top-[-18%] left-[-15%] w-[130%] h-[136%] border-0 object-cover pointer-events-none"
+              />
+            </div>
 
             {/* Top Ambient Badges */}
             <div className="absolute top-5 left-5 z-20 pointer-events-none flex items-center gap-3">
@@ -242,100 +228,24 @@ export default function VideoShowcase() {
               </span>
             </div>
 
-            {/* Floating Unmute Hint Badge (shown when video is muted) */}
-            {isMuted && (
+            {/* Bottom Clean Audio Action Bar (No Progress Timeline Line) */}
+            <div className="absolute bottom-5 right-5 z-30 flex items-center gap-3">
               <button
                 onClick={toggleMute}
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 px-6 py-3 rounded-full bg-sapphire-950/90 border border-champagne-400/60 text-champagne-300 hover:text-white font-mono text-xs uppercase tracking-[0.25em] backdrop-blur-md shadow-champagne-glow transition-all duration-300 hover:scale-105 flex items-center gap-3"
+                className="flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-sapphire-950/90 border border-champagne-400/50 text-champagne-300 hover:text-white hover:border-champagne-400 transition-all backdrop-blur-md text-xs font-mono tracking-wider shadow-2xl"
               >
-                <VolumeX className="w-4 h-4 text-champagne-400" />
-                <span>Tap to Unmute Audio</span>
+                {isMuted ? (
+                  <>
+                    <VolumeX className="w-4 h-4 text-champagne-400" />
+                    <span>Unmute Audio</span>
+                  </>
+                ) : (
+                  <>
+                    <Volume2 className="w-4 h-4 text-champagne-400 animate-pulse" />
+                    <span>Audio Playing</span>
+                  </>
+                )}
               </button>
-            )}
-
-            {/* Custom On-Canvas Video Controls Overlay */}
-            <div className="absolute bottom-0 left-0 w-full z-20 p-4 sm:p-6 bg-gradient-to-t from-sapphire-950 via-sapphire-950/80 to-transparent opacity-90 transition-opacity duration-300">
-              
-              {/* Luxury Seek Progress Bar */}
-              <div className="relative mb-4 flex items-center gap-3">
-                <span className="text-xs font-mono text-champagne-300/80 shrink-0 w-12 text-right">
-                  {formatTime(currentTime)}
-                </span>
-                <div className="relative flex-grow flex items-center">
-                  <input
-                    type="range"
-                    min="0"
-                    max={duration || 100}
-                    step="0.1"
-                    value={currentTime}
-                    onChange={handleSeek}
-                    className="w-full h-1.5 bg-sapphire-800 rounded-lg appearance-none cursor-pointer accent-champagne-400 focus:outline-none"
-                    style={{
-                      background: `linear-gradient(to right, #d4aa70 ${(currentTime / (duration || 1)) * 100}%, rgba(30, 41, 59, 0.8) ${(currentTime / (duration || 1)) * 100}%)`,
-                    }}
-                  />
-                </div>
-                <span className="text-xs font-mono text-champagne-300/80 shrink-0 w-12">
-                  {formatTime(duration)}
-                </span>
-              </div>
-
-              {/* Controls Bar Buttons */}
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-3 sm:gap-4">
-                  {/* Play / Pause Toggle */}
-                  <button
-                    onClick={togglePlay}
-                    className="p-3 rounded-xl bg-sapphire-900/90 border border-champagne-400/40 text-champagne-300 hover:text-white hover:border-champagne-400 transition-all backdrop-blur-md"
-                    title={isPlaying ? 'Pause Film' : 'Play Film'}
-                  >
-                    {isPlaying ? (
-                      <Pause className="w-5 h-5" />
-                    ) : (
-                      <Play className="w-5 h-5 text-champagne-400 fill-champagne-400" />
-                    )}
-                  </button>
-
-                  {/* Skip Backward 10s */}
-                  <button
-                    onClick={() => skipTime(-10)}
-                    className="p-3 rounded-xl bg-sapphire-900/70 border border-champagne-400/30 text-champagne-300 hover:text-white hover:border-champagne-400 transition-all backdrop-blur-md"
-                    title="Rewind 10 Seconds"
-                  >
-                    <RotateCcw className="w-4 h-4" />
-                  </button>
-
-                  {/* Skip Forward 10s */}
-                  <button
-                    onClick={() => skipTime(10)}
-                    className="p-3 rounded-xl bg-sapphire-900/70 border border-champagne-400/30 text-champagne-300 hover:text-white hover:border-champagne-400 transition-all backdrop-blur-md"
-                    title="Forward 10 Seconds"
-                  >
-                    <RotateCw className="w-4 h-4" />
-                  </button>
-                </div>
-
-                {/* Right Action: Mute Toggle */}
-                <div className="flex items-center gap-3">
-                  <button
-                    onClick={toggleMute}
-                    className="flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-sapphire-900/90 border border-champagne-400/40 text-champagne-300 hover:text-white hover:border-champagne-400 transition-all backdrop-blur-md text-xs font-mono tracking-wider"
-                  >
-                    {isMuted ? (
-                      <>
-                        <VolumeX className="w-4 h-4 text-champagne-400" />
-                        <span className="hidden sm:inline">Muted</span>
-                      </>
-                    ) : (
-                      <>
-                        <Volume2 className="w-4 h-4 text-champagne-400 animate-pulse" />
-                        <span className="hidden sm:inline">Audio On</span>
-                      </>
-                    )}
-                  </button>
-                </div>
-              </div>
-
             </div>
           </div>
 
